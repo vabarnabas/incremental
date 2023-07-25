@@ -1,6 +1,8 @@
 import React from "react"
-import LevelUpModal from "../modals/level-up-modal"
+
 import useModalStore from "@/stores/modal.store"
+
+import LevelUpModal from "../modals/level-up-modal"
 
 export default function ModalHandler() {
   const { currentModal } = useModalStore()

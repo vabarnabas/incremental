@@ -22,4 +22,3 @@ export default function getRarityColor(rarity: Rarity) {
       return "bg-slate-200 hover:bg-slate-300 text-slate-700"
   }
 }
-

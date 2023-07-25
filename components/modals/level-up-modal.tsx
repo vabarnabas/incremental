@@ -1,11 +1,12 @@
-import React, { useEffect } from "react"
-import BaseModal from "../base-modal/base-modal"
-import useModalStore from "@/stores/modal.store"
-import useSWR from "swr"
-import { useGameStore } from "@/stores/game.store"
-import useGameAssets from "@/hooks/useGameAssets"
 import clsx from "clsx"
+import React, { useEffect } from "react"
+
 import getRarityColor from "@/helpers/getRarityColor"
+import useGameAssets from "@/hooks/useGameAssets"
+import { useGameStore } from "@/stores/game.store"
+import useModalStore from "@/stores/modal.store"
+
+import BaseModal from "../base-modal/base-modal"
 
 export default function LevelUpModal() {
   const { closeModal } = useModalStore()
@@ -24,6 +25,7 @@ export default function LevelUpModal() {
     setBlessings(blessings)
   }, [])
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const _tailwind = [
     "bg-slate-200",
     "hover:bg-slate-300",

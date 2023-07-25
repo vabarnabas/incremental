@@ -1,16 +1,16 @@
+import clsx from "clsx"
+import { BsFillGiftFill } from "react-icons/bs"
+
 import ModalHandler from "@/components/modal-handler/modal-handler"
-import ToastHandler from "@/components/toast-handler/toast-handler"
 import Toast from "@/components/toast/toast"
+import ToastHandler from "@/components/toast-handler/toast-handler"
 import ZustandHydration from "@/components/zustand-hydration/zustand-hydration"
 import calculateNeededExperience from "@/helpers/calculateNeededExperience"
 import getRarityColor from "@/helpers/getRarityColor"
 import useGameAssets from "@/hooks/useGameAssets"
 import useGameLoop from "@/hooks/useGameLoop"
-import { useToast } from "@/providers/toast.provider"
 import { useGameStore } from "@/stores/game.store"
 import useModalStore from "@/stores/modal.store"
-import clsx from "clsx"
-import { BsFillGiftFill } from "react-icons/bs"
 
 export default function Home() {
   const {
@@ -22,7 +22,6 @@ export default function Home() {
     levelUpRewards,
     getClickValue,
   } = useGameStore()
-  const { createToast } = useToast()
   const { storeItems } = useGameAssets()
   const { openModal } = useModalStore()
 

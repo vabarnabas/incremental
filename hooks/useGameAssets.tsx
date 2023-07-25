@@ -75,7 +75,7 @@ export default function useGameAssets() {
       name: "Initiate Impact",
       description:
         "Unleash an infinite energy source to amplify your clicking exponentially.",
-      levelRequirement: 44,
+      levelRequirement: 54,
       rarity: "unique",
       onSelect: () => {
         addPower(getPowerBySlug("boost-6"))
@@ -118,6 +118,22 @@ export default function useGameAssets() {
 
       cost: (level: number) => {
         return level * 200
+      },
+      icon: <BsGiftFill />,
+      rarity: "rare",
+    },
+    {
+      name: "Blessings (5)",
+      levelRequirement: 34,
+      onSelect: (level?: number) => {
+        if (level) {
+          changeGold(-(level * 540))
+          changeLevelUpRewards(5)
+        }
+      },
+
+      cost: (level: number) => {
+        return level * 540
       },
       icon: <BsGiftFill />,
       rarity: "rare",
